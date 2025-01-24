@@ -3,11 +3,11 @@ from typing import List
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         right = 0
-        while nums[right] < 0:
+        n = len(nums)
+        while right < n and nums[right] < 0:
             right += 1
         left = right - 1
         result = []
-        n = len(nums)
         while left > -1 or right < n:
             if left == -1:
                 value = nums[right]

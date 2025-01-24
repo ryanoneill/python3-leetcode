@@ -11,3 +11,9 @@ def test_ex2():
     solution = Solution()
     result = solution.sortedSquares(nums)
     assert result == [4,9,9,49,121]
+
+def test_ex3():
+    nums = [-1]
+    solution = Solution()
+    result = solution.sortedSquares(nums)
+    assert result == [1]
