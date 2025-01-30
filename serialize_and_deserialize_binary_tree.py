@@ -43,17 +43,17 @@ class Codec:
                 if parent:
                     left = items[i]
                     if left != "null":
-                        parent.left = TreeNode(left)
+                        parent.left = TreeNode(int(left))
                         queue.append(parent.left)
                     i += 1
                     if i < n:
                         right = items[i]
                         i += 1
                         if right != "null":
-                            parent.right = TreeNode(right)
+                            parent.right = TreeNode(int(right))
                             queue.append(parent.right)
                 else:
-                    root = TreeNode(items[i])
+                    root = TreeNode(int(items[i]))
                     i += 1
                     result = root
                     queue.append(root)
