@@ -6,9 +6,9 @@ class PrintTester:
     def __init__(self, foo):
         self.data = ""
         self.foo = foo
-        self.t1 = Thread(target=foo.first(self.printFirst))
-        self.t2 = Thread(target=foo.second(self.printSecond))
-        self.t3 = Thread(target=foo.third(self.printThird))
+        self.t1 = Thread(target=foo.first, args=[self.printFirst])
+        self.t2 = Thread(target=foo.second, args=[self.printSecond])
+        self.t3 = Thread(target=foo.third, args=[self.printThird])
 
     def printFirst(self):
         self.data += "first"
