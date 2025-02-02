@@ -1,6 +1,5 @@
 from serialize_and_deserialize_binary_tree import Codec
 from insert_into_binary_search_tree import Solution
-from tree_node import TreeNode
 
 def test_ex1():
     root = "[4,2,7,1,3]"

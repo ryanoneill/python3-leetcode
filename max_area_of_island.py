@@ -43,7 +43,7 @@ class Solution:
                         if sq[1] < n-1:
                             east = (sq[0], sq[1] + 1)
                             if grid[east[0]][east[1]] == 1:
-                                if not east in seen:
+                                if east not in seen:
                                     seen.add(east)
                                     stack.append(east)
 
@@ -51,7 +51,7 @@ class Solution:
                         if sq[1] > 0:
                             west = (sq[0], sq[1] - 1)
                             if grid[west[0]][west[1]] == 1:
-                                if not west in seen:
+                                if west not in seen:
                                     seen.add(west)
                                     stack.append(west)
 

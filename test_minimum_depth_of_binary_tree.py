@@ -1,4 +1,3 @@
-from tree_node import TreeNode
 from minimum_depth_of_binary_tree import Solution
 from serialize_and_deserialize_binary_tree import Codec
 

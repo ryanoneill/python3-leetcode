@@ -6,7 +6,7 @@ class Solution:
         fast = head
         slow = head
 
-        while fast != None:
+        while fast:
             fast = fast.next
             if fast is not None:
                 fast = fast.next

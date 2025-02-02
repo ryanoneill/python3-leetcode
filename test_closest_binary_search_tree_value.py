@@ -1,6 +1,5 @@
 from closest_binary_search_tree_value import Solution
 from serialize_and_deserialize_binary_tree import Codec
-from tree_node import TreeNode
 
 def test_ex1():
     root = "[4,2,5,1,3]"

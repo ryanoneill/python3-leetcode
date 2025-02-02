@@ -7,9 +7,9 @@ class Solution:
         for edge in edges:
             node1 = edge[0]
             node2 = edge[1]
-            if not node1 in adj:
+            if node1 not in adj:
                 adj[node1] = set()
-            if not node2 in adj:
+            if node2 not in adj:
                 adj[node2] = set()
             adj[node1].add(node2)
             adj[node2].add(node1)
@@ -17,7 +17,7 @@ class Solution:
         result = 0
         seen = set()
         for i in range(n):
-            if not i in seen:
+            if i not in seen:
                 result += 1
                 seen.add(i)
                 stack = [i]
@@ -26,7 +26,7 @@ class Solution:
                     item = stack.pop()
                     if item in adj:
                         for edge in adj[item]:
-                            if not edge in seen:
+                            if edge not in seen:
                                 seen.add(edge)
                                 stack.append(edge)
 

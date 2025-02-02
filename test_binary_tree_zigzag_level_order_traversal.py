@@ -1,6 +1,5 @@
 from binary_tree_zigzag_level_order_traversal import Solution
 from serialize_and_deserialize_binary_tree import Codec
-from tree_node import TreeNode
 
 def test_ex1():
     root = "[3,9,20,null,null,15,7]"

@@ -1,4 +1,4 @@
-from list_node import ListNode, to_list, from_list
+from list_node import to_list, from_list
 
 def test_ex1():
     items = [1,2,3,4,5]
