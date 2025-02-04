@@ -12,11 +12,9 @@ class Solution:
             num = nums[i]
             if num > last:
                 current += num
-                last = num
-                result = max(result, current)
             else:
                 current = num
-                last = num
-                result = max(result, current)
+            last = num
+            result = max(result, current)
 
         return result
