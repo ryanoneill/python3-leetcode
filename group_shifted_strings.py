@@ -3,7 +3,6 @@ from typing import List
 class Solution:
     def key(self, s: str) -> str:
         result = []
-        n = len(s)
         base = ord(s[0])
         for letter in s:
             value = (ord(letter) - base + 26) % 26

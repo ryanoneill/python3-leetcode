@@ -5,6 +5,7 @@ def test_ex1():
     s2 = "kanb"
     solution = Solution()
     result = solution.areAlmostEqual(s1, s2)
+    assert result
 
 def test_ex2():
     s1 = "attack"

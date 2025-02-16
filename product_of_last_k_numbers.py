@@ -1,5 +1,3 @@
-import math
-
 class ProductOfNumbers:
     def __init__(self):
         self.items = [1]

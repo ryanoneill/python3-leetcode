@@ -1,5 +1,4 @@
 from typing import List
-from heapq import heappush, heappop
 
 class Solution:
     def worker(self, items: List[int], remain: List[int]) -> (bool, List[int]):
