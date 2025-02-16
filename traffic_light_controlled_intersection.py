@@ -1,4 +1,5 @@
 from threading import Lock
+from typing import Callable
 
 # TODO: Create Multithreaded Driver Test Harness
 class TrafficLight:

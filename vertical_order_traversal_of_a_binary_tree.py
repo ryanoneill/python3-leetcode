@@ -10,7 +10,7 @@ class Solution:
                 if col not in cols:
                     cols[col] = {}
                 rows = cols[col]
-                if not row in rows:
+                if row not in rows:
                     rows[row] = [value]
                 else:
                     rows[row].append(value)
