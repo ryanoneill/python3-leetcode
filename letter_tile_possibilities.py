@@ -1,15 +1,13 @@
 import copy
 from typing import Dict, List
 
-# TODO: Improve
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
         def worker(counts: Dict[str, int], added: int, length: int) -> int:
             result = 0
-            if added == length:
-                return 1
-            else:
+            if added < length:
                 for letter in counts:
+                    result += 1
                     count = counts[letter]
                     left = copy.deepcopy(counts)
                     if count == 1:
@@ -28,8 +26,6 @@ class Solution:
             else:
                 counts[tile] = 1
 
-        result = 0
-        for i in range(1,n+1):
-            result += worker(counts, 0, i)
+        result = worker(counts, 0, n)
 
         return result
