@@ -1,6 +1,8 @@
 from typing import List
 from collections import deque
 
+# TODO: There is no need for a queue here. Simple sliding window
+# is sufficient.
 class Solution:
     def longestNiceSubarray(self, nums: List[int]) -> int:
         result = 0
