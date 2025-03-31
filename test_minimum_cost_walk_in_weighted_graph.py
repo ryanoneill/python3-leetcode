@@ -15,7 +15,3 @@ def test_ex2():
     solution = Solution()
     results = solution.minimumCost(n, edges, query)
     assert results == [0]
-
-def test_ex3():
-    n = 100000
-

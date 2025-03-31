@@ -3,9 +3,6 @@ class Solution:
         a_n = len(a)
         b_n = len(b)
 
-        a_index = 0
-        b_index = 0
-
         carry = False
         result = []
         for index in range(max(a_n, b_n)):

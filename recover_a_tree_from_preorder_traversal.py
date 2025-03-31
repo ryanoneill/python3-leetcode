@@ -1,5 +1,5 @@
 from tree_node import TreeNode
-from typing import List, Optional
+from typing import Optional
 
 class Solution:
     def recoverFromPreorder(self, traversal: str) -> Optional[TreeNode]:

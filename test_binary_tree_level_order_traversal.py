@@ -1,4 +1,3 @@
-from tree_node import TreeNode
 from binary_tree_level_order_traversal import Solution
 from serialize_and_deserialize_binary_tree import Codec
 
