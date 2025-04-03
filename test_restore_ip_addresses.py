@@ -1,4 +1,4 @@
-from restore_ip_address import Solution
+from restore_ip_addresses import Solution
 
 def test_ex1():
     s = "25525511135"
