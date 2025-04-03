@@ -1,31 +1,20 @@
-from typing import Dict, List
+from collections import Counter
 
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
-        def worker(keys: List[str], counts: Dict[str, int], added: int, length: int) -> int:
-            result = 0
-            if added < length:
-                for letter in keys:
-                    count = counts[letter]
-                    if count > 0:
-                        result += 1
-                        counts[letter] -= 1
-                        result += worker(keys, counts, added+1, length)
-                        counts[letter] += 1
-            return result
+        result = 0
+        counter = Counter(tiles)
 
-        counts = {}
-        n = len(tiles)
-        for i in range(n):
-            tile = tiles[i]
-            if tile in counts:
-                counts[tile] += 1
-            else:
-                counts[tile] = 1
-        keys = []
-        for key in counts:
-            keys.append(key)
+        def backtrack(counter: Counter) -> None:
+            nonlocal result
 
-        result = worker(keys, counts, 0, n)
+            for key, value in counter.items():
+                if value > 0:
+                    result += 1
+                    counter[key] -= 1
+                    backtrack(counter)
+                    counter[key] += 1
+
+        backtrack(counter)
 
         return result
