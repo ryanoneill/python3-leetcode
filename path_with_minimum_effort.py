@@ -1,75 +1,31 @@
-from collections import deque
+from heapq import heappush, heappop
 from typing import List
 
 class Solution:
     def minimumEffortPath(self, heights: List[List[int]]) -> int:
         rows = len(heights)
         columns = len(heights[0])
-        end = (rows-1, columns-1)
 
-        def can_reach_in(effort: int) -> bool:
-            result = False
+        efforts = [[10_000_000] * columns for _ in range(rows)]
 
-            seen = set()
-            queue = deque()
-            queue.append((0, 0))
-            while queue:
-                position = queue.popleft()
-                if position == end:
-                    result = True
-                    break
-                else:
-                    row, column = position
-                    previous = heights[row][column]
+        heap = []
+        heappush(heap, (0, (0, 0)))
+        while heap:
+            effort, position = heappop(heap)
+            row, col = position
+            previous = efforts[row][col]
+            if effort < previous:
+                efforts[row][col] = effort
+                height = heights[row][col]
 
-                    # Up
-                    if row > 0:
-                        up = (row-1, column)
-                        if up not in seen:
-                            diff = abs(previous - heights[up[0]][up[1]])
-                            if diff <= effort:
-                                seen.add(up)
-                                queue.append(up)
+                for x, y in [(0,-1), (0,1), (-1,0), (1,0)]:
+                    new_row = row + x
+                    new_col = col + y
 
-                    # Down
-                    if row < rows-1:
-                        down = (row+1, column)
-                        if down not in seen:
-                            diff = abs(previous - heights[down[0]][down[1]])
-                            if diff <= effort:
-                                seen.add(down)
-                                queue.append(down)
+                    if 0 <= new_row < rows and 0 <= new_col < columns:
+                        new_height = heights[new_row][new_col]
+                        diff = max(effort, abs(new_height - height))
+                        heappush(heap, (diff, (new_row, new_col)))
 
-                    # Left
-                    if column > 0:
-                        left = (row, column-1)
-                        if left not in seen:
-                            diff = abs(previous - heights[left[0]][left[1]])
-                            if diff <= effort:
-                                seen.add(left)
-                                queue.append(left)
+        return efforts[rows-1][columns-1]
 
-                    # Right
-                    if column < columns-1:
-                        right = (row, column+1)
-                        if right not in seen:
-                            diff = abs(previous - heights[right[0]][right[1]])
-                            if diff <= effort:
-                                seen.add(right)
-                                queue.append(right)
-
-            return result
-
-
-        left = 0
-        right = 10_000_000
-        result = 10_000_000
-        while left <= right:
-            mid = left + (right - left) // 2
-            if can_reach_in(mid):
-                result = mid
-                right = mid - 1
-            else:
-                left = mid + 1
-
-        return result

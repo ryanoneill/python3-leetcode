@@ -17,3 +17,9 @@ def test_ex3():
     solution = Solution()
     result = solution.minimumEffortPath(heights)
     assert result == 0
+
+def test_ex4():
+    heights = [[3]]
+    solution = Solution()
+    result = solution.minimumEffortPath(heights)
+    assert result == 0
