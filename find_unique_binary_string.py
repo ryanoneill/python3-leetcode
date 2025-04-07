@@ -1,5 +1,6 @@
 from typing import List, Set
 
+
 class Solution:
     def findDifferentBinaryString(self, nums: List[str]) -> str:
         def worker(items: List[str], index: int, n: int, seen: Set[str]) -> str:
@@ -11,7 +12,7 @@ class Solution:
             else:
                 for digit in ["0", "1"]:
                     items.append(digit)
-                    result = worker(items, index+1, n, seen)
+                    result = worker(items, index + 1, n, seen)
                     if result != "":
                         return result
                     else:

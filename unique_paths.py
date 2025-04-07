@@ -8,10 +8,10 @@ class Solution:
                     if j == 0:
                         paths[i][j] = 1
                     else:
-                        paths[i][j] = paths[i][j-1]
+                        paths[i][j] = paths[i][j - 1]
                 elif j == 0:
-                    paths[i][j] = paths[i-1][j]
+                    paths[i][j] = paths[i - 1][j]
                 else:
-                    paths[i][j] = paths[i-1][j] + paths[i][j-1]
+                    paths[i][j] = paths[i - 1][j] + paths[i][j - 1]
 
-        return paths[m-1][n-1]
+        return paths[m - 1][n - 1]

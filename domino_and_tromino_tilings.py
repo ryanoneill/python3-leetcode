@@ -10,7 +10,7 @@ class Solution:
             full = 2
             full_prev = 1
 
-            for _ in range(3, n+1):
+            for _ in range(3, n + 1):
                 new_partial = (partial + full_prev) % MOD
                 new_full = (full + full_prev + 2 * partial) % MOD
 
@@ -18,5 +18,5 @@ class Solution:
                 full_prev = full
                 full = new_full
                 partial = new_partial
-                
+
         return result

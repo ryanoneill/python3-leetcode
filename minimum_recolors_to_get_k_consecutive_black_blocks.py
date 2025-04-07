@@ -10,10 +10,10 @@ class Solution:
         result = count
 
         for i in range(k, n):
-            if blocks[i-k] == "W":
+            if blocks[i - k] == "W":
                 count -= 1
             if blocks[i] == "W":
                 count += 1
             result = min(result, count)
 
-        return result 
+        return result

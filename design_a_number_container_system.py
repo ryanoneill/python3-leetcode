@@ -1,5 +1,4 @@
 class NumberContainers:
-
     def __init__(self):
         self.by_container = {}
         self.by_number = {}

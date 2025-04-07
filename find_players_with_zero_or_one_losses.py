@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
         players = dict()
@@ -22,5 +23,3 @@ class Solution:
         zero_losses.sort()
         one_loss.sort()
         return [zero_losses, one_loss]
-
-

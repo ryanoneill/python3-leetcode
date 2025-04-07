@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def worker(self, root: Optional[TreeNode], parent: int, count: int) -> int:
         result = count
@@ -23,4 +24,3 @@ class Solution:
             result = max(left, right)
 
         return result
-

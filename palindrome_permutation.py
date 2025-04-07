@@ -15,6 +15,3 @@ class Solution:
                 odd_count += 1
 
         return odd_count < 2
-
-
-

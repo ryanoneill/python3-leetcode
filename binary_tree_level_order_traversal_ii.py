@@ -2,6 +2,7 @@ from queue import deque
 from tree_node import TreeNode
 from typing import Optional, List
 
+
 class Solution:
     def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
         results = []

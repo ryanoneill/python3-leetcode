@@ -20,4 +20,3 @@ class Solution:
                         stack.append(letter)
         result = "".join(stack)
         return result
-

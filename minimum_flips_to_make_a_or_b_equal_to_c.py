@@ -7,7 +7,7 @@ class Solution:
 
     def minFlips(self, a: int, b: int, c: int) -> int:
         result = 0
-        maximum = bin(10 ** 9)[2:]
+        maximum = bin(10**9)[2:]
         n = len(maximum)
 
         bin_a = self.make_bin(a, n)

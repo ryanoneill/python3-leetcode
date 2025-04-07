@@ -2,6 +2,7 @@ from tree_node import TreeNode
 from collections import deque
 from typing import Optional
 
+
 class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
         result = 0
@@ -20,5 +21,3 @@ class Solution:
                     queue.append(item.right)
 
         return result
-
-

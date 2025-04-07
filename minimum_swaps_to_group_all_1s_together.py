@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def minSwaps(self, data: List[int]) -> int:
         window = 0
@@ -7,7 +8,6 @@ class Solution:
             if num == 1:
                 window += 1
 
-        
         count = 0
         for i in range(window):
             if data[i] == 1:
@@ -21,5 +21,5 @@ class Solution:
             if data[j] == 1:
                 count += 1
             result = min(result, window - count)
-        
+
         return result

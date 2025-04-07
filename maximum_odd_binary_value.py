@@ -8,4 +8,3 @@ class Solution:
 
         result = "1" * (ones - 1) + "0" * (n - ones) + "1"
         return result
-

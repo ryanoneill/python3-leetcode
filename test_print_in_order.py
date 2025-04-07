@@ -2,6 +2,7 @@ from typing import List
 from print_in_order import Foo
 from threading import Thread
 
+
 class PrintTester:
     def __init__(self, foo):
         self.data = ""
@@ -31,7 +32,7 @@ class PrintTester:
             elif num == 3:
                 self.t3.start()
             else:
-                raise f'unknown num {num}'
+                raise f"unknown num {num}"
 
         self.t1.join()
         self.t2.join()
@@ -39,22 +40,25 @@ class PrintTester:
 
         return self.getResults()
 
+
 def test_ex1():
-    nums = [1,2,3]
+    nums = [1, 2, 3]
     foo = Foo()
     pt = PrintTester(foo)
     result = pt.run(nums)
     assert result == "firstsecondthird"
+
 
 def test_ex2():
-    nums = [1,3,2]
+    nums = [1, 3, 2]
     foo = Foo()
     pt = PrintTester(foo)
     result = pt.run(nums)
     assert result == "firstsecondthird"
 
+
 def test_ex3():
-    nums = [3,2,1]
+    nums = [3, 2, 1]
     foo = Foo()
     pt = PrintTester(foo)
     result = pt.run(nums)

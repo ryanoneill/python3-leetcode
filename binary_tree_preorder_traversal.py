@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import List, Optional
 
+
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         def worker(results: List[int], node: Optional[TreeNode]):

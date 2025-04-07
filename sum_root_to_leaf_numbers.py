@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
         def dfs(path: str, node: TreeNode) -> int:
@@ -22,4 +23,3 @@ class Solution:
         if root:
             result = dfs("", root)
         return result
-

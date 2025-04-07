@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def canRob(self, nums: List[int], k: int, amount: int) -> bool:
         result = False

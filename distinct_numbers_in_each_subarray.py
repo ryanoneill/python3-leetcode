@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def distinctNumbers(self, nums: List[int], k: int) -> List[int]:
         counts = {}
@@ -13,7 +14,7 @@ class Solution:
 
         result.append(len(counts))
 
-        for j in range(k,n):
+        for j in range(k, n):
             left = j - k
             old = nums[left]
             if counts[old] == 1:

@@ -18,7 +18,8 @@ from serialize_and_deserialize_binary_tree import Codec
 #     result = solution.lcaDeepestLeaves(root)
 #     s = codec.serialize(result)
 #     assert s == "[1]"
-    
+
+
 def test_ex3():
     items = "[0,1,3,null,2]"
     codec = Codec()
@@ -27,5 +28,3 @@ def test_ex3():
     result = solution.lcaDeepestLeaves(root)
     s = codec.serialize(result)
     assert s == "[2]"
-
-

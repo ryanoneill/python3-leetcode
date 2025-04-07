@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def divideArray(self, nums: List[int]) -> bool:
         seen = set()
@@ -11,4 +12,3 @@ class Solution:
 
         result = len(seen) == 0
         return result
-

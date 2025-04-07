@@ -1,7 +1,8 @@
 from first_unique_number import FirstUnique
 
+
 def test_ex1():
-    nums = [2,3,5]
+    nums = [2, 3, 5]
     fu = FirstUnique(nums)
     result = fu.showFirstUnique()
     assert result == 2
@@ -15,8 +16,9 @@ def test_ex1():
     result = fu.showFirstUnique()
     assert result == -1
 
+
 def test_ex2():
-    nums = [7,7,7,7,7,7]
+    nums = [7, 7, 7, 7, 7, 7]
     fu = FirstUnique(nums)
     result = fu.showFirstUnique()
     assert result == -1
@@ -27,6 +29,7 @@ def test_ex2():
     fu.add(17)
     result = fu.showFirstUnique()
     assert result == 17
+
 
 def test_ex3():
     nums = [809]

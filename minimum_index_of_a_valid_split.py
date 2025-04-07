@@ -1,6 +1,7 @@
 from collections import Counter
 from typing import List
 
+
 class Solution:
     def minimumIndex(self, nums: List[int]) -> int:
         n = len(nums)
@@ -9,7 +10,7 @@ class Solution:
 
         seen = 0
         result = -1
-        left = total 
+        left = total
         for index, num in enumerate(nums):
             if num == dominant:
                 seen += 1

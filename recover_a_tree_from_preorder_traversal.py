@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def recoverFromPreorder(self, traversal: str) -> Optional[TreeNode]:
         values = traversal.split("-")
@@ -28,4 +29,3 @@ class Solution:
             i += 1
 
         return result
-

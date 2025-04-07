@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def minZeroArray(self, nums: List[int], queries: List[List[int]]) -> int:
         m = len(queries)
@@ -20,7 +21,9 @@ class Solution:
 
         return result
 
-    def becomes_zero_array(self, nums: List[int], queries: List[List[int]], k: int) -> bool:
+    def becomes_zero_array(
+        self, nums: List[int], queries: List[List[int]], k: int
+    ) -> bool:
         result = True
 
         n = len(nums)
@@ -30,7 +33,7 @@ class Solution:
         for i in range(k):
             left, right, value = queries[i]
             diffs[left] += value
-            diffs[right+1] -= value
+            diffs[right + 1] -= value
 
         for i in range(n):
             sum += diffs[i]

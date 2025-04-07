@@ -1,6 +1,7 @@
 from print_foobar_alternately import FooBar
 from threading import Thread
 
+
 class FooBarTester:
     def __init__(self, foobar):
         self.data = ""
@@ -23,12 +24,14 @@ class FooBarTester:
 
         return self.data
 
+
 def test_ex1():
     n = 1
     foobar = FooBar(n)
     fbt = FooBarTester(foobar)
     result = fbt.run()
     assert result == "foobar"
+
 
 def test_ex2():
     n = 2

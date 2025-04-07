@@ -1,6 +1,7 @@
 from binary_tree_zigzag_level_order_traversal import Solution
 from serialize_and_deserialize_binary_tree import Codec
 
+
 def test_ex1():
     root = "[3,9,20,null,null,15,7]"
     codec = Codec()
@@ -8,7 +9,8 @@ def test_ex1():
 
     solution = Solution()
     result = solution.zigzagLevelOrder(head)
-    assert result == [[3],[20,9],[15,7]]
+    assert result == [[3], [20, 9], [15, 7]]
+
 
 def test_ex2():
     root = "[1]"
@@ -18,6 +20,7 @@ def test_ex2():
     solution = Solution()
     result = solution.zigzagLevelOrder(head)
     assert result == [[1]]
+
 
 def test_ex3():
     root = "[]"

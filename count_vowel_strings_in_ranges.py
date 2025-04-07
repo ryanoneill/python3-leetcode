@@ -1,8 +1,9 @@
 from typing import List
 
+
 class Solution:
     def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
-        vowels = { "a", "e", "i", "o", "u" }
+        vowels = {"a", "e", "i", "o", "u"}
         prefix = [0]
         sum = 0
         for word in words:
@@ -16,8 +17,7 @@ class Solution:
         for query in queries:
             left = query[0]
             right = query[1]
-            value = prefix[right+1] - prefix[left]
+            value = prefix[right + 1] - prefix[left]
             result.append(value)
 
         return result
-

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def getParent(self, parents: List[int], i: int) -> int:
         if parents[i] == i:
@@ -15,7 +16,9 @@ class Solution:
 
         parents[jpar] = ipar
 
-    def minimumCost(self, n: int, edges: List[List[int]], query: List[List[int]]) -> List[int]:
+    def minimumCost(
+        self, n: int, edges: List[List[int]], query: List[List[int]]
+    ) -> List[int]:
         parents = list(range(n))
 
         for edge in edges:

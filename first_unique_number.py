@@ -1,5 +1,6 @@
 from typing import List
 
+
 class FirstUnique:
     def __init__(self, nums: List[int]):
         self.nums = []

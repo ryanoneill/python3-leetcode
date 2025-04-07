@@ -1,6 +1,7 @@
 from typing import List
 import math
 
+
 class Solution:
     # Checks whether odd num is prime only
     def isPrime(self, num: int) -> bool:
@@ -11,7 +12,7 @@ class Solution:
 
     def closestPrimes(self, left: int, right: int) -> List[int]:
         result = [-1, -1]
-        diff = right - left 
+        diff = right - left
 
         start = left
         if start % 2 == 0:
@@ -21,7 +22,7 @@ class Solution:
         if left == 1:
             start = 3
             last_prime = 2
-        for i in range(start, right+1, 2):
+        for i in range(start, right + 1, 2):
             if self.isPrime(i):
                 if last_prime == -1:
                     last_prime = i
@@ -34,5 +35,3 @@ class Solution:
                             break
                     last_prime = i
         return result
-
-

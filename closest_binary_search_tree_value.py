@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def __worker(self, node: Optional[TreeNode], target: float, closest: int) -> int:
         result = closest

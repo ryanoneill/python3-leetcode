@@ -1,6 +1,7 @@
 from typing import List
 from heapq import heapify, heappush, heappop
 
+
 class Solution:
     def minOperations(self, nums: List[int], k: int) -> int:
         result = 0
@@ -12,4 +13,3 @@ class Solution:
             heappush(nums, item)
             result += 1
         return result
-

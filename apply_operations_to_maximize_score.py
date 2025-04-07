@@ -1,11 +1,12 @@
 from typing import List
 
+
 class Solution:
     def _power(self, base: int, exponent: int) -> int:
         MOD = 10**9 + 7
 
         result = 1
-        
+
         while exponent > 0:
             if exponent % 2 == 1:
                 result = (result * base) % MOD
@@ -25,7 +26,7 @@ class Solution:
             for i in range(2, n + 1):
                 if values[i]:
                     result.append(i)
-                    for j in range(i*i, n+1, i):
+                    for j in range(i * i, n + 1, i):
                         values[j] = False
 
         return result
@@ -73,7 +74,7 @@ class Solution:
 
         ordered = sorted(enumerate(nums), key=lambda value: -value[1])
         result = 1
-        
+
         i = 0
         while k > 0:
             index, num = ordered[i]
@@ -84,4 +85,3 @@ class Solution:
             i += 1
 
         return result
-

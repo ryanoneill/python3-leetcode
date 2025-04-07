@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
         smaller = 0
@@ -32,4 +33,3 @@ class Solution:
                 e_index += 1
 
         return results
-

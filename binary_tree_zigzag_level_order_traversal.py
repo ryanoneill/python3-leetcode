@@ -2,6 +2,7 @@ from queue import deque
 from tree_node import TreeNode
 from typing import Optional, List
 
+
 class Solution:
     def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         level = 0

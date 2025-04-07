@@ -1,5 +1,6 @@
 from typing import List
 
+
 class ZigzagIterator:
     def __init__(self, v1: List[int], v2: List[int]):
         self.v1 = v1
@@ -10,7 +11,7 @@ class ZigzagIterator:
         self.index = 0
 
     def next(self) -> int:
-        result = -1 
+        result = -1
         if self.first:
             result = self.v1[self.index]
             if self.index < self.v2_n:

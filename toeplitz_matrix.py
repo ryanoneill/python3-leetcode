@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def checkDiagonal(self, matrix: List[List[int]], row: int, col: int) -> bool:
         value = matrix[row][col]

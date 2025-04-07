@@ -1,6 +1,7 @@
 from typing import List
 from heapq import heappush, heappop
 
+
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
         first = {}
@@ -28,6 +29,6 @@ class Solution:
                 end = j
             elif j > end:
                 end = j
-                
+
         results.append(end - start + 1)
         return results

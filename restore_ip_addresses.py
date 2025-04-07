@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         results = []
@@ -9,7 +10,7 @@ class Solution:
             result = True
             sub = s[previous:current]
 
-            if sub[0] == '0' and len(sub) > 1:
+            if sub[0] == "0" and len(sub) > 1:
                 result = False
             elif int(sub) > 255:
                 result = False
@@ -18,10 +19,10 @@ class Solution:
 
         def backtrack(places: List[int], start: int) -> None:
             if len(places) == 3:
-                first = s[0:places[0]]
-                second = s[places[0]:places[1]]
-                third = s[places[1]:places[2]]
-                fourth = s[places[2]:]
+                first = s[0 : places[0]]
+                second = s[places[0] : places[1]]
+                third = s[places[1] : places[2]]
+                fourth = s[places[2] :]
                 results.append(first + "." + second + "." + third + "." + fourth)
             else:
                 for i in range(start, n):
@@ -34,10 +35,9 @@ class Solution:
 
                     if proceed:
                         places.append(i)
-                        backtrack(places, i+1)
+                        backtrack(places, i + 1)
                         places.pop()
 
         backtrack([], 1)
 
         return results
-

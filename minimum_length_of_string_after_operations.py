@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def minimumLength(self, s: str) -> int:
         result = 0

@@ -1,6 +1,6 @@
 class Solution:
     def countLetters(self, s: str) -> int:
-        last = ''
+        last = ""
         run = 0
         result = 0
 
@@ -14,5 +14,3 @@ class Solution:
             result += run
 
         return result
-
-

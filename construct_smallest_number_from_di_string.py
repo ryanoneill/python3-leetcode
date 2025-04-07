@@ -12,12 +12,16 @@ class Solution:
                     if not used[i]:
                         value = i + 1
                         can_proceed = last == 0
-                        can_proceed = can_proceed or (pattern[index-1] == 'I' and value > last)
-                        can_proceed = can_proceed or (pattern[index-1] == 'D' and value < last)
+                        can_proceed = can_proceed or (
+                            pattern[index - 1] == "I" and value > last
+                        )
+                        can_proceed = can_proceed or (
+                            pattern[index - 1] == "D" and value < last
+                        )
                         if can_proceed:
                             current[index] = value
                             used[i] = True
-                            result = worker(value, index+1)
+                            result = worker(value, index + 1)
                             if result:
                                 return True
                             else:
@@ -27,6 +31,7 @@ class Solution:
                             result = False
 
             return result
+
         worker(0, 0)
 
         return "".join(map(str, current))

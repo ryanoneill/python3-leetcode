@@ -2,6 +2,7 @@ from queue import deque
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:
         result = 0

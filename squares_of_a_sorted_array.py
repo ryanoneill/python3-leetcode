@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         right = 0
@@ -31,5 +32,3 @@ class Solution:
                     result.append(right_value)
                     right += 1
         return result
-
-

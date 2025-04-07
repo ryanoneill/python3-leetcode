@@ -1,7 +1,7 @@
 from queue import deque
 
-class MovingAverage:
 
+class MovingAverage:
     def __init__(self, size: int):
         self.values = deque()
         self.count = 0

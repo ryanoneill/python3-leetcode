@@ -1,6 +1,7 @@
 from typing import List
 from collections import deque
 
+
 # TODO: There is no need for a queue here. Simple sliding window
 # is sufficient.
 class Solution:
@@ -9,7 +10,7 @@ class Solution:
         current = deque()
 
         for num in nums:
-            i = len(current) - 1 
+            i = len(current) - 1
             while i > -1 and current[i] & num == 0:
                 i -= 1
 
@@ -22,4 +23,3 @@ class Solution:
             result = max(result, len(current))
 
         return result
-

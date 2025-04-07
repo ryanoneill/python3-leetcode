@@ -1,6 +1,7 @@
 from heapq import heappush, heappop
 from typing import List, Tuple
 
+
 class Solution:
     def is_satisfied(self, recs: List[Tuple[int, int]]) -> bool:
         result = False

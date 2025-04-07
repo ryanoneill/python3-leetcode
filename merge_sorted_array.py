@@ -1,9 +1,10 @@
 from typing import List
 
+
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        index1 = m-1
-        index2 = n-1
+        index1 = m - 1
+        index2 = n - 1
 
         rindex = (m + n) - 1
         while index1 >= 0 or index2 >= 0:
@@ -26,4 +27,3 @@ class Solution:
                 index2 -= 1
 
             rindex -= 1
-

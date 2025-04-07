@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         result = root
@@ -13,4 +14,3 @@ class Solution:
             root.right = self.insertIntoBST(root.right, val)
 
         return result
-

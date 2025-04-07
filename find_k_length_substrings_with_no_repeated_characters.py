@@ -15,7 +15,7 @@ class Solution:
             result += 1
 
         for i in range(k, n):
-            previous = s[i-k]
+            previous = s[i - k]
             counts[previous] -= 1
             if counts[previous] == 0:
                 del counts[previous]

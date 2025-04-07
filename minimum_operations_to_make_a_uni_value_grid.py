@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def minOperations(self, grid: List[List[int]], x: int) -> int:
         values = []
@@ -21,4 +22,3 @@ class Solution:
                 result += abs(value - median) // x
 
         return result
-

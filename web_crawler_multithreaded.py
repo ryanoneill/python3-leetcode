@@ -4,11 +4,12 @@ from concurrent.futures import ThreadPoolExecutor
 from collections import deque
 from typing import List
 
+
 class Solution:
     def get_hostname(self, url: str) -> str:
         return url.lstrip("http://").rsplit("/")[0]
 
-    def crawl(self, startUrl: str, htmlParser: 'HtmlParser') -> List[str]:
+    def crawl(self, startUrl: str, htmlParser: "HtmlParser") -> List[str]:
         hostname = self.get_hostname(startUrl)
 
         queue = deque()
@@ -27,5 +28,3 @@ class Solution:
                             queue.append(item)
 
         return list(seen)
-
-

@@ -1,6 +1,7 @@
 from typing import List
 from heapq import heappush, heappop
 
+
 class Solution:
     def makePrefSumNonNegative(self, nums: List[int]) -> int:
         sum = 0
@@ -14,5 +15,5 @@ class Solution:
             if sum < 0:
                 result += 1
                 sum -= heappop(negs)
-        
+
         return result

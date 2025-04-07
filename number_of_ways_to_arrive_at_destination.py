@@ -1,9 +1,10 @@
 from typing import Dict, List
 from heapq import heappush, heappop
 
+
 class Solution:
     def adjacency(self, n: int, roads: List[List[int]]) -> Dict[int, Dict[int, int]]:
-        result = { key: {} for key in range(n) }
+        result = {key: {} for key in range(n)}
         for road in roads:
             u, v, time = road
             result[u][v] = time
@@ -26,13 +27,14 @@ class Solution:
                     combined = time_value + time_next
                     if combined < shortest_time[inter_next]:
                         shortest_time[inter_next] = combined
-                        shortest_path_counts[inter_next] = shortest_path_counts[inter_value]
+                        shortest_path_counts[inter_next] = shortest_path_counts[
+                            inter_value
+                        ]
                         heappush(heap, (combined, inter_next))
                     elif combined == shortest_time[inter_next]:
                         shortest_path_counts[inter_next] = (
-                            shortest_path_counts[inter_next] + shortest_path_counts[inter_value]
+                            shortest_path_counts[inter_next]
+                            + shortest_path_counts[inter_value]
                         ) % 1000000007
 
-        return shortest_path_counts[n-1]
-
-
+        return shortest_path_counts[n - 1]

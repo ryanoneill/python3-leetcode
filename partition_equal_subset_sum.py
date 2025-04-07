@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
         s = sum(nums)
@@ -19,4 +20,3 @@ class Solution:
                         dp[value] = True
 
         return dp[target]
-

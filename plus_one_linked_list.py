@@ -1,5 +1,6 @@
 from list_node import ListNode
 
+
 class Solution:
     def plusOne(self, head: ListNode) -> ListNode:
         result = head
@@ -23,4 +24,3 @@ class Solution:
                 carry = False
 
         return result
-

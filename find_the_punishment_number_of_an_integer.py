@@ -1,5 +1,6 @@
 from typing import Dict, Set
 
+
 class Solution:
     def partitions(self, num: int, cache: Dict[int, Set[int]]) -> Set[int]:
         if num not in cache:
@@ -17,7 +18,7 @@ class Solution:
     def punishmentNumber(self, n: int) -> int:
         result = 0
         cache = {}
-        for i in range(n+1):
+        for i in range(n + 1):
             squared = i * i
             partitions = self.partitions(squared, cache)
             if i in partitions:

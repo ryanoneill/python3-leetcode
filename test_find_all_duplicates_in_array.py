@@ -6,11 +6,13 @@ from find_all_duplicates_in_array import Solution
 #     result = solution.findDuplicates(nums)
 #     assert result == [2,3]
 
+
 def test_ex2():
-    nums = [1,1,2]
+    nums = [1, 1, 2]
     solution = Solution()
     result = solution.findDuplicates(nums)
     assert result == [1]
+
 
 # def test_ex3():
 #     nums = [1]

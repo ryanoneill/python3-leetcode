@@ -11,7 +11,7 @@ class Solution:
         current = 0
         result = 0
 
-        for i in range(0, n-1):
+        for i in range(0, n - 1):
             if s[i] == "0":
                 zeros += 1
             else:

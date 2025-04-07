@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def buyChoco(self, prices: List[int], money: int) -> int:
         min_one = -1

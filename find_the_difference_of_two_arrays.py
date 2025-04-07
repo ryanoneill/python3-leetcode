@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
         set1 = set(nums1)
@@ -8,4 +9,3 @@ class Solution:
         list2 = list(set2 - set1)
         result = [list1, list2]
         return result
-

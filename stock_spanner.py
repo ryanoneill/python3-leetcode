@@ -1,5 +1,4 @@
 class StockSpanner:
-
     def __init__(self):
         self.values = []
         self.day = 0

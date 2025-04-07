@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
         found = set()
@@ -8,7 +9,7 @@ class Solution:
         result = 0
 
         for i in range(len(nums)):
-            expected += (i + 1)
+            expected += i + 1
             num = nums[i]
             if num not in found:
                 actual += num

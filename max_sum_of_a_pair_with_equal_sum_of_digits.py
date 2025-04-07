@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def sumDigits(self, num: int) -> int:
         result = 0

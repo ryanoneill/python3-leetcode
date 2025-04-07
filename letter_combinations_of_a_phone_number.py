@@ -1,5 +1,6 @@
 from typing import Set, List
 
+
 class Solution:
     def digit_to_letters(self, digit: str) -> Set[str]:
         if digit == "2":

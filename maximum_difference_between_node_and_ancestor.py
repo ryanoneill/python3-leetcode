@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def __worker(self, node: Optional[TreeNode], minimum: int, maximum: int) -> int:
         value = node.val

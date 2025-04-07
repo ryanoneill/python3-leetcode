@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def answerQueries(self, nums: List[int], queries: List[int]) -> List[int]:
         n = len(nums)
@@ -34,4 +35,3 @@ class Solution:
             results[i] = result
 
         return results
-

@@ -1,5 +1,6 @@
 from typing import List
 
+
 # Using DFS on purpose as an exercise instead of UF
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:

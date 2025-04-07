@@ -1,5 +1,6 @@
 from implement_trie import Trie
 
+
 def test_ex1():
     trie = Trie()
     trie.insert("apple")

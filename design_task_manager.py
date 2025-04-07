@@ -1,6 +1,7 @@
 from typing import List
 from heapq import heappop, heappush
 
+
 class TaskManager:
     def __init__(self, tasks: List[List[int]]):
         self.task_order = []
@@ -39,5 +40,3 @@ class TaskManager:
                 result = item[2]
                 break
         return result
-
-

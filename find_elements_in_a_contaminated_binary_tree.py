@@ -2,6 +2,7 @@ from collections import deque
 from tree_node import TreeNode
 from typing import Optional
 
+
 class FindElements:
     def __init__(self, root: Optional[TreeNode]):
         self.values = set()

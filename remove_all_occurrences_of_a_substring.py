@@ -8,7 +8,7 @@ class Solution:
             stack.append(letter)
             if letter == part[-1]:
                 m = len(stack)
-                if m > n-1:
+                if m > n - 1:
                     matches = True
                     for i in range(n):
                         s_index = m - n + i
@@ -20,5 +20,3 @@ class Solution:
                             stack.pop()
 
         return "".join(stack)
-
-

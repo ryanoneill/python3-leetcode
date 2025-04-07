@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
         result = 0

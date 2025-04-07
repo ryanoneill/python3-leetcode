@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
         n = len(nums)
@@ -18,7 +19,7 @@ class Solution:
 
         left = 0
         right = n - 1
-        neg_index = n 
+        neg_index = n
 
         while left <= right:
             mid = left + (right - left) // 2
@@ -33,4 +34,3 @@ class Solution:
         result = max(positive, negative)
 
         return result
-

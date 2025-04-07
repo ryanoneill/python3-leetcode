@@ -1,8 +1,11 @@
 from list_node import ListNode
 from typing import Optional
 
+
 class Solution:
-    def deleteNodes(self, head: Optional[ListNode], m: int, n: int) -> Optional[ListNode]:
+    def deleteNodes(
+        self, head: Optional[ListNode], m: int, n: int
+    ) -> Optional[ListNode]:
         result = head
         previous = head
         current = head
@@ -24,5 +27,3 @@ class Solution:
                         break
 
         return result
-
-

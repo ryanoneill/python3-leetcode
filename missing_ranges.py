@@ -1,7 +1,10 @@
 from typing import List, Optional
 
+
 class Solution:
-    def findMissingRanges(self, nums: List[int], lower: int, upper: int) -> List[List[int]]:
+    def findMissingRanges(
+        self, nums: List[int], lower: int, upper: int
+    ) -> List[List[int]]:
         results = []
         last: Optional[int] = None
         for num in nums:
@@ -16,7 +19,7 @@ class Solution:
             last = num
         if last is not None:
             if last < upper:
-                range = [last+1, upper]
+                range = [last + 1, upper]
                 results.append(range)
         else:
             range = [lower, upper]

@@ -18,10 +18,10 @@ class Solution:
                 if cs != ct:
                     used = True
                     if ns == nt:
-                        result = s[i+1:] == t[i+1:]
+                        result = s[i + 1 :] == t[i + 1 :]
                         break
                     else:
-                        result = s[i:] == t[i+1:]
+                        result = s[i:] == t[i + 1 :]
                         break
 
             if not used:

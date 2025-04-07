@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def getAverages(self, nums: List[int], k: int) -> List[int]:
         n = len(nums)
@@ -15,7 +16,7 @@ class Solution:
             elif n - k <= i:
                 result.append(-1)
             else:
-                sum = sums[i+k+1] - sums[i-k]
+                sum = sums[i + k + 1] - sums[i - k]
                 divisor = 2 * k + 1
                 value = int(sum / divisor)
                 result.append(value)

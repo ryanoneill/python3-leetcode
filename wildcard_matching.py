@@ -15,17 +15,17 @@ class Solution:
                 else:
                     pattern = p[position]
                     if pattern == "*":
-                        result = result or worker(position, index+1)
-                        result = result or worker(position+1, index+1)
-                        result = result or worker(position+1, index)
+                        result = result or worker(position, index + 1)
+                        result = result or worker(position + 1, index + 1)
+                        result = result or worker(position + 1, index)
                     elif index == len(s):
                         result = False
                     elif pattern == "?":
-                        result = worker(position+1, index+1)
+                        result = worker(position + 1, index + 1)
                     else:
                         result = pattern == s[index]
                         if result:
-                            result = worker(position+1, index+1)
+                            result = worker(position + 1, index + 1)
                 cache[(position, index)] = result
 
             return result

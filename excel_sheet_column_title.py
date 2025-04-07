@@ -8,4 +8,3 @@ class Solution:
             result.append(letter)
             value = (value // 26) - 1
         return "".join(reversed(result))
-

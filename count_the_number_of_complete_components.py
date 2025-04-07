@@ -1,6 +1,7 @@
 from collections import deque
 from typing import List
 
+
 class Solution:
     def countCompleteComponents(self, n: int, edges: List[List[int]]) -> int:
         connected = {index: set() for index in range(n)}
@@ -28,7 +29,7 @@ class Solution:
                 n = len(seen)
                 should = True
                 for item in seen:
-                    if len(connected[item]) != n-1:
+                    if len(connected[item]) != n - 1:
                         should = False
                         break
 
@@ -37,4 +38,4 @@ class Solution:
 
                 overall = overall.union(seen)
 
-        return result 
+        return result

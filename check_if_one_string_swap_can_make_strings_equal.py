@@ -14,7 +14,6 @@ class Solution:
                     if len(diffs) > 2:
                         break
 
-
         d = len(diffs)
         if d == 0:
             result = True
@@ -28,6 +27,3 @@ class Solution:
             result = False
 
         return result
-        
-
-

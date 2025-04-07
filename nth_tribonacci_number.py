@@ -11,11 +11,10 @@ class Solution:
             minus_one = 1
             minus_two = 1
             minus_three = 0
-            for _ in range(3, n+1):
+            for _ in range(3, n + 1):
                 result = minus_three + minus_two + minus_one
                 minus_three = minus_two
                 minus_two = minus_one
                 minus_one = result
 
         return result
-

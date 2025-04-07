@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def findMiddleIndex(self, nums: List[int]) -> int:
         result = -1
@@ -15,5 +16,5 @@ class Solution:
                 break
             else:
                 running += value
-                
+
         return result

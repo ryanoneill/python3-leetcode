@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         candidates.sort()
@@ -21,7 +22,7 @@ class Solution:
                         if next_remaining < 0:
                             break
                         combination.append(value)
-                        backtrack(combination, i+1, next_remaining)
+                        backtrack(combination, i + 1, next_remaining)
                         combination.pop()
 
         backtrack([], 0, target)

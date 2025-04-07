@@ -1,11 +1,12 @@
 from typing import List
 
+
 class Solution:
     def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:
         results = []
 
         by_number = {}
-        by_color = {} 
+        by_color = {}
 
         for query in queries:
             num = query[0]
@@ -19,7 +20,7 @@ class Solution:
                     by_color[previous] -= 1
             by_number[num] = color
             if color not in by_color:
-                by_color[color] = 1 
+                by_color[color] = 1
             else:
                 by_color[color] += 1
 

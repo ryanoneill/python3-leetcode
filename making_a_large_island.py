@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def worker(self, grid: List[List[int]], marker: int, i: int, j: int) -> int:
         seen = set()
@@ -29,7 +30,7 @@ class Solution:
                         stack.append(north)
 
             # South
-            if sq[0] < m-1:
+            if sq[0] < m - 1:
                 south = (sq[0] + 1, sq[1])
                 if grid[south[0]][south[1]] == 1:
                     if south not in seen:
@@ -38,7 +39,7 @@ class Solution:
                         stack.append(south)
 
             # East
-            if sq[1] < n-1:
+            if sq[1] < n - 1:
                 east = (sq[0], sq[1] + 1)
                 if grid[east[0]][east[1]] == 1:
                     if east not in seen:
@@ -86,25 +87,25 @@ class Solution:
 
                     # North
                     if i > 0:
-                        north = grid[i-1][j]
+                        north = grid[i - 1][j]
                         if north != 0:
                             neighbors.add(north)
 
                     # South
-                    if i < m-1:
-                        south = grid[i+1][j]
+                    if i < m - 1:
+                        south = grid[i + 1][j]
                         if south != 0:
                             neighbors.add(south)
 
                     # East
-                    if j < n-1:
-                        east = grid[i][j+1]
+                    if j < n - 1:
+                        east = grid[i][j + 1]
                         if east != 0:
                             neighbors.add(east)
 
                     # West
                     if j > 0:
-                        west = grid[i][j-1]
+                        west = grid[i][j - 1]
                         if west != 0:
                             neighbors.add(west)
 

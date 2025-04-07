@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     # j - i != nums[j] - nums[i]
     # is the same as

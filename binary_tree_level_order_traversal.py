@@ -2,6 +2,7 @@ from tree_node import TreeNode
 from typing import List, Optional
 from queue import deque
 
+
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         result = []
@@ -22,5 +23,3 @@ class Solution:
             result.append(level)
 
         return result
-
-

@@ -2,8 +2,8 @@ from queue import deque
 from tree_node import TreeNode
 from typing import Optional
 
-class Codec:
 
+class Codec:
     def serialize(self, root: Optional[TreeNode]) -> str:
         result = []
 

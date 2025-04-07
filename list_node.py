@@ -1,9 +1,11 @@
 from typing import List, Optional
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
 
 def to_list(head: Optional[ListNode]) -> List[int]:
     result = []
@@ -12,6 +14,7 @@ def to_list(head: Optional[ListNode]) -> List[int]:
         result.append(next.val)
         next = next.next
     return result
+
 
 def from_list(items: List[int]) -> Optional[ListNode]:
     head = None
@@ -25,5 +28,3 @@ def from_list(items: List[int]) -> Optional[ListNode]:
             previous.next = current
             previous = current
     return head
-
-

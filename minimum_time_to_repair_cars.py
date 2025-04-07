@@ -1,13 +1,13 @@
 from typing import List
 import math
 
+
 class Solution:
     def canFinish(self, ranks: List[int], cars: int, time: int) -> bool:
         count = 0
         for rank in ranks:
-            count += math.floor(math.sqrt(time // rank ))
+            count += math.floor(math.sqrt(time // rank))
         return count >= cars
-
 
     def repairCars(self, ranks: List[int], cars: int) -> int:
         lowest = min(ranks)

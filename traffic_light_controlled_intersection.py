@@ -1,6 +1,7 @@
 from threading import Lock
 from typing import Callable
 
+
 # TODO: Create Multithreaded Driver Test Harness
 class TrafficLight:
     def __init__(self):
@@ -12,8 +13,8 @@ class TrafficLight:
         carId: int,
         roadId: int,
         direction: int,
-        turnGreen: 'Callable[[], None]',
-        crossCar: 'Callable[[], None]'
+        turnGreen: "Callable[[], None]",
+        crossCar: "Callable[[], None]",
     ) -> None:
         with self.lock:
             if self.green_road != roadId:

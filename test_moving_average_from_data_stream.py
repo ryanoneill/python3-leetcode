@@ -1,6 +1,7 @@
 from math import isclose
 from moving_average_from_data_stream import MovingAverage
 
+
 def test_ex1():
     size = 3
     moving_average = MovingAverage(size)

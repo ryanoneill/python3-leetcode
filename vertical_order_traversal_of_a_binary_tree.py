@@ -1,9 +1,11 @@
 from tree_node import TreeNode
 from typing import List, Optional
 
+
 class Solution:
     def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
         cols = {}
+
         def worker(node: Optional[TreeNode], row: int, col: int) -> None:
             if node:
                 value = node.val
@@ -16,6 +18,7 @@ class Solution:
                     rows[row].append(value)
                 worker(node.left, row + 1, col - 1)
                 worker(node.right, row + 1, col + 1)
+
         worker(root, 0, 0)
 
         results = []

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def reverseString(self, s: List[str]) -> None:
         """
@@ -13,4 +14,3 @@ class Solution:
             s[right] = temp
             left += 1
             right -= 1
-

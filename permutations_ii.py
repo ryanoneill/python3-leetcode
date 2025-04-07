@@ -1,5 +1,6 @@
 from typing import List, Set
 
+
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         results = []
@@ -11,7 +12,7 @@ class Solution:
             if len(path) == n:
                 results.append(path[:])
             else:
-                last = 10000 # range is -10 <= num <= 10
+                last = 10000  # range is -10 <= num <= 10
                 for i in range(0, n):
                     value = nums[i]
                     if i not in used and value != last:
@@ -24,6 +25,3 @@ class Solution:
 
         backtrack([], set())
         return results
-
-        
-

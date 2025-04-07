@@ -1,9 +1,11 @@
 from tree_node import TreeNode
 from typing import List, Optional
 
-class Solution:
 
-    def constructFromPrePost(self, preorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
+class Solution:
+    def constructFromPrePost(
+        self, preorder: List[int], postorder: List[int]
+    ) -> Optional[TreeNode]:
         index_pre = 0
         index_post = 0
 

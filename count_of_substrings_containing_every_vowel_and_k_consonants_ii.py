@@ -1,6 +1,6 @@
 class Solution:
     def isVowel(self, letter: str) -> bool:
-        return letter in {'a', 'e', 'i', 'o', 'u'}
+        return letter in {"a", "e", "i", "o", "u"}
 
     def atLeastK(self, word: str, k: int) -> int:
         result = 0

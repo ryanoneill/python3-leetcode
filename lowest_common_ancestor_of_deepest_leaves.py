@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional, Tuple
 
+
 class Solution:
     def lcaDeepestLeaves(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         def dfs(node: Optional[TreeNode]) -> Tuple[int, Optional[TreeNode]]:

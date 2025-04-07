@@ -1,5 +1,6 @@
 from abc import abstractmethod
 
+
 class Pattern:
     def __init__(self, value: str):
         self.value = value
@@ -16,13 +17,16 @@ class Pattern:
     def is_multiple(self) -> bool:
         pass
 
+
 class Single(Pattern):
     def is_multiple(self) -> bool:
         return False
 
+
 class Multiple(Pattern):
     def is_multiple(self) -> bool:
         return True
+
 
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
@@ -38,6 +42,7 @@ class Solution:
                 patterns.append(single)
 
         cache = {}
+
         def worker(position: int, index: int) -> bool:
             nonlocal cache
             nonlocal patterns
@@ -48,7 +53,7 @@ class Solution:
                 else:
                     pattern = patterns[position]
                     if pattern.is_multiple():
-                        return worker(position+1, index)
+                        return worker(position + 1, index)
                     else:
                         return False
             elif position == len(patterns):
@@ -60,15 +65,15 @@ class Solution:
                 if pattern.is_multiple():
                     result = pattern.matches_at(s, index)
                     if result:
-                        result = worker(position, index+1)
-                        result = result or worker(position+1, index+1)
-                        result = result or worker(position+1, index)
+                        result = worker(position, index + 1)
+                        result = result or worker(position + 1, index + 1)
+                        result = result or worker(position + 1, index)
                     else:
-                        result = worker(position+1, index)
+                        result = worker(position + 1, index)
                 else:
                     result = pattern.matches_at(s, index)
                     if result:
-                        result = worker(position+1, index+1)
+                        result = worker(position + 1, index + 1)
                 cache[(position, index)] = result
                 return result
 

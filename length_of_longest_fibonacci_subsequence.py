@@ -1,14 +1,15 @@
 from typing import List
 
+
 class Solution:
     def lenLongestFibSubseq(self, arr: List[int]) -> int:
         n = len(arr)
-        highest = arr[n-1]
+        highest = arr[n - 1]
         nums = set(arr)
 
         result = 0
-        for i in range(n-1):
-            for j in range(i+1, n):
+        for i in range(n - 1):
+            for j in range(i + 1, n):
                 current = 0
                 first = arr[i]
                 second = arr[j]

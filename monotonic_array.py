@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def compare(self, a: int, b: int) -> int:
         result = 0
@@ -10,12 +11,12 @@ class Solution:
         else:
             result = 0
         return result
-    
+
     def isMonotonic(self, nums: List[int]) -> bool:
         result = True
 
         n = len(nums)
-        cmp = self.compare(nums[0], nums[n-1])
+        cmp = self.compare(nums[0], nums[n - 1])
         last = nums[0]
 
         for i in range(1, n):

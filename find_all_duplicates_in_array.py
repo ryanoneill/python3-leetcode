@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
         # Uses CycleSort
@@ -17,6 +18,5 @@ class Solution:
         for i in range(n):
             if nums[i] != i + 1:
                 result.append(nums[i])
-            
-        return result
 
+        return result

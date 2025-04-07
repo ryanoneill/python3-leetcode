@@ -7,7 +7,7 @@ class Solution:
         result = []
         for index in range(max(a_n, b_n)):
             a_value = "0"
-            b_value = "0" 
+            b_value = "0"
 
             if index < a_n:
                 a_value = a[a_n - index - 1]

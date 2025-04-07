@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
         n = len(triangle)
@@ -11,6 +12,6 @@ class Solution:
                 if i == 0:
                     dp[index][j] = value
                 else:
-                    dp[index][j] = value + min(dp[index+1][j], dp[index+1][j+1])
+                    dp[index][j] = value + min(dp[index + 1][j], dp[index + 1][j + 1])
 
         return dp[0][0]

@@ -2,6 +2,7 @@ from typing import List
 from collections import deque
 from heapq import heappush, heappop
 
+
 class Solution:
     def maxPoints(self, grid: List[List[int]], queries: List[int]):
         m = len(grid)

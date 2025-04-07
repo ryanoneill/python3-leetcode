@@ -1,7 +1,10 @@
 from typing import List
 
+
 class Solution:
-    def successfulPairs(self, spells: List[int], potions: List[int], success: int) -> List[int]:
+    def successfulPairs(
+        self, spells: List[int], potions: List[int], success: int
+    ) -> List[int]:
         m = len(potions)
         potions.sort()
         print(potions)
@@ -26,5 +29,3 @@ class Solution:
             results[i] = m - left
 
         return results
-
-

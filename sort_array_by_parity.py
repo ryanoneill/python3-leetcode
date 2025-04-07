@@ -1,10 +1,11 @@
 from typing import List
 
+
 class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
         n = len(nums)
         left = 0
-        right = n-1
+        right = n - 1
         result = [0] * n
 
         for num in nums:
@@ -16,5 +17,3 @@ class Solution:
                 right -= 1
 
         return result
-
-

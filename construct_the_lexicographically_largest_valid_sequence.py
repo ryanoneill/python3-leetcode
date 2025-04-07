@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def worker(self, items: List[int], remain: List[int]) -> (bool, List[int]):
         if not remain:
@@ -23,9 +24,9 @@ class Solution:
         return (False, [])
 
     def constructDistancedSequence(self, n: int) -> List[int]:
-        length = (n-1) * 2 + 1
+        length = (n - 1) * 2 + 1
         items = [0 for i in range(length)]
-        remain = [i for i in range(n,0,-1)]
+        remain = [i for i in range(n, 0, -1)]
 
         (result, value) = self.worker(items, remain)
 

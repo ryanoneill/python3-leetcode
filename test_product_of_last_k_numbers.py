@@ -1,5 +1,6 @@
 from product_of_last_k_numbers import ProductOfNumbers
 
+
 def test_ex1():
     pon = ProductOfNumbers()
     pon.add(3)

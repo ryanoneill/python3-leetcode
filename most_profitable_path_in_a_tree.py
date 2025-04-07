@@ -1,5 +1,6 @@
 from typing import List, Dict, Set
 
+
 # Solution needs tons of work, but it passes
 class Solution:
     def toAdjList(self, edges: List[List[int]]) -> Dict[int, Set[int]]:
@@ -16,7 +17,9 @@ class Solution:
             results[node2].add(node1)
         return results
 
-    def shortestPaths(self, adj_list: Dict[int, Set[int]], bob: int) -> Dict[int, List[int]]:
+    def shortestPaths(
+        self, adj_list: Dict[int, Set[int]], bob: int
+    ) -> Dict[int, List[int]]:
         results = {}
         seen = set()
 
@@ -35,7 +38,9 @@ class Solution:
 
         return results
 
-    def mostProfitablePath(self, edges: List[List[int]], bob: int, amount: List[int]) -> int:
+    def mostProfitablePath(
+        self, edges: List[List[int]], bob: int, amount: List[int]
+    ) -> int:
         adj_list = self.toAdjList(edges)
         shortest_paths = self.shortestPaths(adj_list, bob)
         bob_path = list(reversed(shortest_paths[bob]))
@@ -49,7 +54,7 @@ class Solution:
 
             result = 0
 
-            opened = set() 
+            opened = set()
 
             alice_path = shortest_paths[dest]
             alice_n = len(alice_path)

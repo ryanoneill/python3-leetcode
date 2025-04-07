@@ -1,6 +1,7 @@
 from print_zero_even_odd import ZeroEvenOdd
 from threading import Thread
 
+
 class ZeroEvenOddTester:
     def __init__(self, zeo):
         self.data = ""
@@ -23,6 +24,7 @@ class ZeroEvenOddTester:
 
         return self.data
 
+
 def test_ex1():
     n = 2
     zeo = ZeroEvenOdd(n)
@@ -30,10 +32,10 @@ def test_ex1():
     result = zeot.run()
     assert result == "0102"
 
+
 def test_ex2():
     n = 5
     zeo = ZeroEvenOdd(n)
     zeot = ZeroEvenOddTester(zeo)
     result = zeot.run()
     assert result == "0102030405"
-

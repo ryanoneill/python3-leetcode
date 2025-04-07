@@ -1,11 +1,13 @@
 from regular_expression_matching import Solution
 
+
 def test_ex1():
     s = "aa"
     p = "a"
     solution = Solution()
     result = solution.isMatch(s, p)
     assert not result
+
 
 def test_ex2():
     s = "aa"
@@ -14,12 +16,14 @@ def test_ex2():
     result = solution.isMatch(s, p)
     assert result
 
+
 def test_ex3():
     s = "ab"
     p = ".*"
     solution = Solution()
     result = solution.isMatch(s, p)
     assert result
+
 
 def test_ex4():
     s = "aab"
@@ -28,6 +32,7 @@ def test_ex4():
     result = solution.isMatch(s, p)
     assert result
 
+
 def test_ex5():
     s = "mississippi"
     p = "mis*is*p*."
@@ -35,12 +40,14 @@ def test_ex5():
     result = solution.isMatch(s, p)
     assert not result
 
+
 def test_ex6():
     s = "a"
     p = "ab*"
     solution = Solution()
     result = solution.isMatch(s, p)
     assert result
+
 
 def test_ex7():
     s = "bbbba"

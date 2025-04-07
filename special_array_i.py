@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def isArraySpecial(self, nums: List[int]) -> bool:
         result = True
@@ -7,7 +8,7 @@ class Solution:
 
         # odd = True, even = False
         last = nums[0] % 2 == 1
-        for i in range(1,n):
+        for i in range(1, n):
             value = nums[i]
             current = value % 2 == 1
             result = last ^ current
@@ -16,4 +17,3 @@ class Solution:
                 break
 
         return result
-

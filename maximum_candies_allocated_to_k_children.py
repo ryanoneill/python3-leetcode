@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def can_give(self, candies: List[int], k: int, amount: int) -> bool:
         if amount == 0:

@@ -1,8 +1,11 @@
 from collections import defaultdict, deque
 from typing import List
 
+
 class Solution:
-    def findAllRecipes(self, recipes: List[str], ingredients: List[List[str]], supplies: List[str]) -> List[str]:
+    def findAllRecipes(
+        self, recipes: List[str], ingredients: List[List[str]], supplies: List[str]
+    ) -> List[str]:
         haves = set(supplies)
         indices = {recipe: index for index, recipe in enumerate(recipes)}
         dependencies = defaultdict(list)

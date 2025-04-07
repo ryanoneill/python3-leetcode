@@ -1,5 +1,6 @@
 from stock_spanner import StockSpanner
 
+
 def test_ex1():
     stock_spanner = StockSpanner()
     result = stock_spanner.next(100)
@@ -16,6 +17,7 @@ def test_ex1():
     assert result == 4
     result = stock_spanner.next(85)
     assert result == 6
+
 
 def test_ex2():
     stock_spanner = StockSpanner()
