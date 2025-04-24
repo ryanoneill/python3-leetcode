@@ -1,32 +1,26 @@
 from typing import Callable
-import threading
+from threading import Event
 
 
 class Foo:
     def __init__(self):
-        self.first_done = False
-        self.first_condition = threading.Condition()
+        self.first_done = Event()
+        self.second_done = Event()
 
-        self.second_done = False
-        self.second_condition = threading.Condition()
 
     def first(self, printFirst: "Callable[[], None]") -> None:
         printFirst()
-        with self.first_condition:
-            self.first_done = True
-            self.first_condition.notify()
+        self.first_done.set()
+
 
     def second(self, printSecond: "Callable[[], None]") -> None:
-        while not self.first_done:
-            with self.first_condition:
-                self.first_condition.wait()
+        while not self.first_done.is_set():
+            self.first_done.wait()
         printSecond()
-        with self.second_condition:
-            self.second_done = True
-            self.second_condition.notify()
+        self.second_done.set()
+
 
     def third(self, printThird: "Callable[[], None]") -> None:
-        while not self.second_done:
-            with self.second_condition:
-                self.second_condition.wait()
+        while not self.second_done.is_set():
+            self.second_done.wait()
         printThird()
