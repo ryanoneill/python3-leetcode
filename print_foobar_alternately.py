@@ -1,25 +1,28 @@
-from threading import Condition
+from threading import Event
 from typing import Callable
 
 
 class FooBar:
     def __init__(self, n):
-        self.foo_ready = True
-        self.foo_condition = Condition()
+        self.foo_ready = Event()
+        self.bar_ready = Event()
         self.n = n
+        self.foo_ready.set()
+
 
     def foo(self, printFoo: "Callable[[], None]") -> None:
-        for i in range(self.n):
-            with self.foo_condition:
-                self.foo_condition.wait_for(lambda: self.foo_ready)
-                printFoo()
-                self.foo_ready = False
-                self.foo_condition.notify()
+        for _ in range(self.n):
+            while not self.foo_ready.is_set():
+                self.foo_ready.wait()
+            printFoo()
+            self.foo_ready.clear()
+            self.bar_ready.set()
+
 
     def bar(self, printBar: "Callable[[], None]") -> None:
-        for i in range(self.n):
-            with self.foo_condition:
-                self.foo_condition.wait_for(lambda: not self.foo_ready)
-                printBar()
-                self.foo_ready = True
-                self.foo_condition.notify()
+        for _ in range(self.n):
+            while not self.bar_ready.is_set():
+                self.bar_ready.wait()
+            printBar()
+            self.bar_ready.clear()
+            self.foo_ready.set()
