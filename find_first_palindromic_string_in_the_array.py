@@ -1,15 +1,16 @@
 from typing import List
 
+
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         result = True
 
         n = len(s)
         mid = n // 2
-        if n % 2 == 0: # 6, we want left to be 2 and right to be 3
+        if n % 2 == 0:  # 6, we want left to be 2 and right to be 3
             left = mid - 1
             right = mid
-        else:          # 7, we want left to be 2 and right to be 4
+        else:  # 7, we want left to be 2 and right to be 4
             left = mid - 1
             right = mid + 1
 
@@ -33,5 +34,3 @@ class Solution:
                 break
 
         return result
-
-

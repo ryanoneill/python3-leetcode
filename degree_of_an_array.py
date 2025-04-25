@@ -1,6 +1,7 @@
 from collections import Counter
 from typing import List
 
+
 class Solution:
     def findShortestSubArray(self, nums: List[int]) -> int:
         counts = Counter(nums)

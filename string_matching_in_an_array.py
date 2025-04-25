@@ -1,5 +1,6 @@
 from typing import List
 
+
 # TODO: Switch to use KMP or Rabin-Karp
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
@@ -7,8 +8,8 @@ class Solution:
         n = len(words)
         words.sort(key=lambda w: len(w))
 
-        for i in range(n-1):
-            for j in range(i+1, n):
+        for i in range(n - 1):
+            for j in range(i + 1, n):
                 shorter = words[i]
                 longer = words[j]
                 pos = longer.find(shorter)

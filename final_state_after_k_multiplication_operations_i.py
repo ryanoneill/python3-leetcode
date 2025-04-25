@@ -1,6 +1,7 @@
 from typing import List
 from heapq import heappush, heappop
 
+
 class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
         heap = []

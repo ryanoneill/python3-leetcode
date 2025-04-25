@@ -1,6 +1,7 @@
 from balanced_binary_tree import Solution
 from serialize_and_deserialize_binary_tree import Codec
 
+
 def test_ex1():
     data = "[3,9,20,null,null,15,7]"
     codec = Codec()

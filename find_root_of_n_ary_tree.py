@@ -1,8 +1,9 @@
 from node import Node
 from typing import List
 
+
 class Solution:
-    def findRoot(self, tree: List['Node']) -> 'Node':
+    def findRoot(self, tree: List["Node"]) -> "Node":
         total = 0
         for node in tree:
             total += node.val or 0

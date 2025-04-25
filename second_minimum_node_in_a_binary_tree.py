@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def findSecondMinimumValue(self, root: Optional[TreeNode]) -> int:
         def worker(node: Optional[TreeNode], first: int) -> int:

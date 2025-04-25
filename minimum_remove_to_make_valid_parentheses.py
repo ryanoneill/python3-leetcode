@@ -1,9 +1,8 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        last_open = -1
         open = []
         closed = []
-        
+
         for i, item in enumerate(s):
             if item == "(":
                 open.append(i)
@@ -12,7 +11,6 @@ class Solution:
                     open.pop()
                 else:
                     closed.append(i)
-
 
         bad = set(open).union(set(closed))
         result = []

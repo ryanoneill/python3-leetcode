@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def timeRequiredToBuy(self, tickets: List[int], k: int) -> int:
         result = 0
@@ -11,6 +12,6 @@ class Solution:
             elif i == k:
                 result += buying
             else:
-                result += min(count, buying-1)
+                result += min(count, buying - 1)
 
         return result

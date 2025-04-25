@@ -1,10 +1,10 @@
 from typing import List
 
+
 class Bank:
     def __init__(self, balance: List[int]) -> None:
         self.balances = balance
         self.accounts = len(balance)
-
 
     def transfer(self, account1: int, account2: int, money: int) -> bool:
         result = False
@@ -17,7 +17,6 @@ class Bank:
                 result = True
         return result
 
-
     def deposit(self, account: int, money: int) -> bool:
         result = False
         acc_index = account - 1
@@ -25,7 +24,6 @@ class Bank:
             self.balances[acc_index] += money
             result = True
         return result
-
 
     def withdraw(self, account: int, money: int) -> bool:
         result = False
@@ -35,5 +33,3 @@ class Bank:
                 self.balances[acc_index] -= money
                 result = True
         return result
-
-

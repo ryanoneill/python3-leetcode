@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def countPairs(self, nums: List[int], k: int) -> int:
         result = 0

@@ -3,8 +3,8 @@ class Solution:
         maximum = 0
         result = 0
         counts = {}
-        
-        for i in range(1, n+1):
+
+        for i in range(1, n + 1):
             value = str(i)
             total = sum(int(digit) for digit in value)
             if total in counts:

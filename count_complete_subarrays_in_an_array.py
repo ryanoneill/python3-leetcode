@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def countCompleteSubarrays(self, nums: List[int]) -> int:
         unique = len(set(nums))
@@ -22,4 +23,4 @@ class Solution:
                         break
                 result += left + 1
 
-        return result 
+        return result

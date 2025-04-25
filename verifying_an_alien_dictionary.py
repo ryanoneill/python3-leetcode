@@ -1,10 +1,11 @@
 from typing import List
 
+
 class Solution:
     def isAlienSorted(self, words: List[str], order: str) -> bool:
         n = len(words)
         result = True
-        
+
         indexed = {letter: i for i, letter in enumerate(order)}
 
         last = words[0]

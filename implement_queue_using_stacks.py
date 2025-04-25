@@ -20,5 +20,3 @@ class MyQueue:
 
     def empty(self) -> bool:
         return not self.back and not self.front
-
-            

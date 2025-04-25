@@ -2,6 +2,7 @@ from node import Node
 from collections import deque
 from typing import Optional
 
+
 class Codec:
     def serialize(self, root: Optional[Node]) -> str:
         result = []
@@ -59,5 +60,3 @@ class Codec:
                     parent.children = children
 
         return result
-
-

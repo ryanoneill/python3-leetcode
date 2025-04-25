@@ -4,7 +4,7 @@ class Solution:
         n = len(num)
         for i in reversed(range(n)):
             if int(num[i]) % 2 == 1:
-                result = num[:i+1]
+                result = num[: i + 1]
                 break
 
         return result

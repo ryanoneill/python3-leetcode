@@ -1,6 +1,7 @@
 from collections import deque
 from threading import Semaphore
 
+
 # TODO: Implement Test for This
 class BoundedBlockingQueue(object):
     def __init__(self, capacity: int) -> None:
@@ -22,4 +23,3 @@ class BoundedBlockingQueue(object):
 
     def size(self) -> int:
         return len(self.values)
-

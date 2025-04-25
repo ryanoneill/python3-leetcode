@@ -12,6 +12,7 @@ class Solution:
             prefixn = n - sn
 
             cache = {}
+
             def worker(i: int, tight: bool) -> int:
                 key = (i, tight)
                 if i == n:
@@ -36,4 +37,4 @@ class Solution:
 
             return worker(0, True)
 
-        return count(finish) - count(start-1)
+        return count(finish) - count(start - 1)

@@ -1,6 +1,7 @@
 from collections import Counter
 from heapq import heappop, heappush, heapify
 
+
 class Solution:
     def reorganizeString(self, s: str) -> str:
         counter = Counter(s)

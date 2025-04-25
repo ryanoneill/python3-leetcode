@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
         def worker(node: Optional[TreeNode]) -> int:
@@ -14,4 +15,5 @@ class Solution:
                     result += worker(node.right)
 
             return result
+
         return worker(root)

@@ -1,6 +1,7 @@
 from itertools import zip_longest
 from typing import Iterator, List
 
+
 class Solution:
     def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
         def gen(words: List[str]) -> Iterator[str]:
@@ -18,4 +19,3 @@ class Solution:
                 break
 
         return result
-

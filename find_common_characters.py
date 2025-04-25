@@ -1,6 +1,7 @@
 from collections import Counter
 from typing import List
 
+
 class Solution:
     def merge(self, c: Counter, d: Counter) -> Counter:
         result = Counter()

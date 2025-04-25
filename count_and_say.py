@@ -3,9 +3,9 @@ class Solution:
         if n == 1:
             return "1"
         else:
-            s = self.countAndSay(n-1)
+            s = self.countAndSay(n - 1)
             result = []
-            last = ''
+            last = ""
             count = 0
             for value in s:
                 if value == last:
@@ -21,4 +21,3 @@ class Solution:
             result.append(last)
 
             return "".join(result)
-

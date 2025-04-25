@@ -2,6 +2,7 @@ from tree_node import TreeNode
 from itertools import zip_longest
 from typing import Iterator, Optional
 
+
 class Solution:
     def leaf_gen(self, root: Optional[TreeNode]) -> Iterator[int]:
         def worker(node: Optional[TreeNode]):
@@ -14,6 +15,7 @@ class Solution:
                         yield from worker(node.left)
                     if node.right:
                         yield from worker(node.right)
+
         yield from worker(root)
 
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:

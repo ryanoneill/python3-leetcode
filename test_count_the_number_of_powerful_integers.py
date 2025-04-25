@@ -1,5 +1,6 @@
 from count_the_number_of_powerful_integers import Solution
 
+
 def test_ex1():
     start = 1
     finish = 6000
@@ -8,6 +9,7 @@ def test_ex1():
     solution = Solution()
     result = solution.numberOfPowerfulInt(start, finish, limit, s)
     assert result == 5
+
 
 def test_ex2():
     start = 15
@@ -18,6 +20,7 @@ def test_ex2():
     result = solution.numberOfPowerfulInt(start, finish, limit, s)
     assert result == 2
 
+
 def test_ex3():
     start = 1000
     finish = 2000
@@ -27,6 +30,7 @@ def test_ex3():
     result = solution.numberOfPowerfulInt(start, finish, limit, s)
     assert result == 0
 
+
 def test_ex4():
     start = 1829505
     finish = 1255574165
@@ -34,7 +38,8 @@ def test_ex4():
     s = "11223"
     solution = Solution()
     result = solution.numberOfPowerfulInt(start, finish, limit, s)
-    assert result == 5470 
+    assert result == 5470
+
 
 def test_ex5():
     start = 1114
@@ -45,6 +50,7 @@ def test_ex5():
     result = solution.numberOfPowerfulInt(start, finish, limit, s)
     assert result == 4194295
 
+
 def test_ex6():
     start = 1
     finish = 971
@@ -53,6 +59,7 @@ def test_ex6():
     solution = Solution()
     result = solution.numberOfPowerfulInt(start, finish, limit, s)
     assert result == 10
+
 
 def test_ex7():
     start = 3

@@ -10,5 +10,3 @@ class Solution:
                 first[letter] = i
 
         return result
-
-

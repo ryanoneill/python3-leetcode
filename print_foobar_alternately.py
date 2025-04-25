@@ -9,7 +9,6 @@ class FooBar:
         self.n = n
         self.foo_ready.set()
 
-
     def foo(self, printFoo: "Callable[[], None]") -> None:
         for _ in range(self.n):
             while not self.foo_ready.is_set():
@@ -17,7 +16,6 @@ class FooBar:
             printFoo()
             self.foo_ready.clear()
             self.bar_ready.set()
-
 
     def bar(self, printBar: "Callable[[], None]") -> None:
         for _ in range(self.n):

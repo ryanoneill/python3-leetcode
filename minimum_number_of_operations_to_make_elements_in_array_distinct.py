@@ -1,6 +1,7 @@
 from collections import Counter
 from typing import List
 
+
 class Solution:
     def minimumOperations(self, nums: List[int]) -> int:
         n = len(nums)
@@ -23,4 +24,3 @@ class Solution:
             index += 3
 
         return result
-

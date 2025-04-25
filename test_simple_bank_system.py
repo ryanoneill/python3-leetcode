@@ -1,5 +1,6 @@
 from simple_bank_system import Bank
 
+
 def test_ex1():
     bank = Bank([10, 100, 20, 50, 30])
     assert bank.withdraw(3, 10)

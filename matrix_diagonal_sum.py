@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def diagonalSum(self, mat: List[List[int]]) -> int:
         m = len(mat)
@@ -11,7 +12,7 @@ class Solution:
 
         # anti-diagonal
         for i in range(m):
-            j = m-1 - i
+            j = m - 1 - i
             if i != j:
                 result += mat[i][j]
 

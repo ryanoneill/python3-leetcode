@@ -1,8 +1,11 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
-    def removeLeafNodes(self, root: Optional[TreeNode], target: int) -> Optional[TreeNode]:
+    def removeLeafNodes(
+        self, root: Optional[TreeNode], target: int
+    ) -> Optional[TreeNode]:
         def worker(node: Optional[TreeNode]) -> Optional[TreeNode]:
             result = node
             if node:
@@ -21,5 +24,3 @@ class Solution:
             return result
 
         return worker(root)
-
-

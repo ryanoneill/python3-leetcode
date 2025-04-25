@@ -1,12 +1,13 @@
 from typing import List
 
+
 class Solution:
     def factorial(self, n: int) -> List[int]:
-        result = [0] * (n+1)
+        result = [0] * (n + 1)
         result[0] = 1
         result[1] = 1
-        for i in range(2, n+1):
-            result[i] = result[i-1] * i
+        for i in range(2, n + 1):
+            result[i] = result[i - 1] * i
 
         return result
 
@@ -31,7 +32,7 @@ class Solution:
             count = mid
         part_mult = 10**count
 
-        for start in range(1, 9+1):
+        for start in range(1, 9 + 1):
             begin = start
             begin *= part_mult
             for i in range(0, part_mult):

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     # TODO: Switch to use Sliding Window
 
@@ -22,16 +23,16 @@ class Solution:
             for i in range(n):
                 if k > 0:
                     # replace i with the sum of the next k numbers
-                    index = i+1+k
+                    index = i + 1 + k
                     if index > n:
                         index -= n
-                        result[i] = prefix[n] - prefix[i+1]
+                        result[i] = prefix[n] - prefix[i + 1]
                         result[i] += prefix[index] - prefix[0]
                     else:
-                        result[i] = prefix[index] - prefix[i+1]
+                        result[i] = prefix[index] - prefix[i + 1]
                 elif k < 0:
                     # replace i with the sum of the previous k numbers
-                    index = i+k
+                    index = i + k
                     if index < 0:
                         index += n
                         result[i] = prefix[n] - prefix[index]

@@ -23,17 +23,18 @@ class SegmentTree:
                     result = self.left_tree.query(left, right)
             else:
                 if self.left_tree and self.right_tree:
-                    result = (self.left_tree.query(left, mid) +
-                              self.right_tree.query(mid+1, right))
+                    result = self.left_tree.query(left, mid) + self.right_tree.query(
+                        mid + 1, right
+                    )
         return result
 
     @staticmethod
-    def build(nums: List[int]) -> 'SegmentTree':
+    def build(nums: List[int]) -> "SegmentTree":
         n = len(nums)
-        return SegmentTree._build(nums, 0, n-1)
+        return SegmentTree._build(nums, 0, n - 1)
 
     @staticmethod
-    def _build(nums: List[int], left: int, right: int) -> 'SegmentTree':
+    def _build(nums: List[int], left: int, right: int) -> "SegmentTree":
         if left == right:
             num = nums[left]
             return SegmentTree(num, left, right)
@@ -42,7 +43,7 @@ class SegmentTree:
 
             result = SegmentTree(0, left, right)
             result.left_tree = SegmentTree._build(nums, left, mid)
-            result.right_tree = SegmentTree._build(nums, mid+1, right)
+            result.right_tree = SegmentTree._build(nums, mid + 1, right)
             result.value = result.left_tree.value + result.right_tree.value
 
             return result

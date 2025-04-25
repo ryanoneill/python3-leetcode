@@ -10,4 +10,3 @@ class Solution:
                 stack.append(letter)
 
         return len(stack)
-

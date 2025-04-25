@@ -1,5 +1,6 @@
 from count_the_number_of_ideal_arrays import Solution
 
+
 def test_ex1():
     n = 2
     maxValue = 5
@@ -14,4 +15,3 @@ def test_ex2():
     solution = Solution()
     result = solution.idealArrays(n, maxValue)
     assert result == 11
-

@@ -1,9 +1,10 @@
 from node import Node
 from typing import Optional
 
+
 class Solution:
-    def maxDepth(self, root: 'Node') -> int:
-        def worker(node: Optional['Node'], level: int) -> int:
+    def maxDepth(self, root: "Node") -> int:
+        def worker(node: Optional["Node"], level: int) -> int:
             result = level
             if node:
                 level += 1

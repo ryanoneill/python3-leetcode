@@ -1,6 +1,7 @@
 from typing import List
 from heapq import heappop, heappush
 
+
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         intervals.sort()
@@ -24,11 +25,3 @@ class Solution:
             result = max(result, len(heap))
 
         return result
-
-
-
-
-
-
-
-

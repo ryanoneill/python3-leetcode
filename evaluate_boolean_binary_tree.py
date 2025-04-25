@@ -1,6 +1,7 @@
 from tree_node import TreeNode
 from typing import Optional
 
+
 class Solution:
     def evaluateTree(self, root: Optional[TreeNode]) -> bool:
         def worker(node: Optional[TreeNode]) -> bool:

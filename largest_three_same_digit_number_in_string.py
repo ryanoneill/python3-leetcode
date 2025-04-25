@@ -19,8 +19,3 @@ class Solution:
             result = str(result_int) * 3
 
         return result
-                
-
-
-
-

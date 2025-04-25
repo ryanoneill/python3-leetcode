@@ -1,7 +1,10 @@
 from typing import List
 
+
 class Solution:
-    def removeInterval(self, intervals: List[List[int]], toBeRemoved: List[int]) -> List[List[int]]:
+    def removeInterval(
+        self, intervals: List[List[int]], toBeRemoved: List[int]
+    ) -> List[List[int]]:
         results = []
         rem_start, rem_end = toBeRemoved
 
@@ -15,4 +18,3 @@ class Solution:
                     results.append([rem_end, end])
 
         return results
-

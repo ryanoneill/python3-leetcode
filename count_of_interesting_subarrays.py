@@ -1,10 +1,9 @@
 from collections import defaultdict
 from typing import List
 
+
 class Solution:
-    def countInterestingSubarrays(
-        self, nums: List[int], modulo: int, k: int
-    ) -> int:
+    def countInterestingSubarrays(self, nums: List[int], modulo: int, k: int) -> int:
         result = 0
 
         counts = defaultdict(int)

@@ -6,14 +6,14 @@ class Solution:
         results[0] = 5
         results[1] = 20
         for i in range(2, 50):
-            result = results[i-1]
+            result = results[i - 1]
             result *= result
             result = result % MOD
             results[i] = result
 
         result = 0
         for i in reversed(range(50)):
-            value = 2 ** i
+            value = 2**i
             while n >= value:
                 if result == 0:
                     result = results[i]

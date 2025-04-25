@@ -1,6 +1,7 @@
 from fenwick_tree import FenwickTree
 from typing import List, Dict
 
+
 class Solution:
     def indexed(self, nums: List[int]) -> Dict[int, int]:
         result = {}
@@ -19,7 +20,7 @@ class Solution:
             nums1index = nums1indexed[num]
             left = tree.prefix(nums1index)
             tree.update(nums1index, 1)
-            right = (n-1 - nums1index) - (i - left)
+            right = (n - 1 - nums1index) - (i - left)
             result += left * right
 
         return result
