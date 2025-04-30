@@ -1,4 +1,3 @@
-from collections import deque
 from typing import List, Tuple
 
 class Solution:
@@ -8,13 +7,13 @@ class Solution:
         m = len(grid1)
         n = len(grid1[0])
 
-        queue = deque()
+        stack = []
+        stack.append(key)
         seen = set()
-        queue.append(key)
         seen.add(key)
 
-        while queue:
-            row, col = queue.popleft()
+        while stack:
+            row, col = stack.pop()
             if grid1[row][col] != 1:
                 result = False
             grid2[row][col] = 2
@@ -24,7 +23,7 @@ class Solution:
                 north_row, north_col = row - 1, col
                 north = (north_row, north_col)
                 if north not in seen and grid2[north_row][north_col] == 1:
-                    queue.append(north)
+                    stack.append(north)
                     seen.add(north)
 
             # South
@@ -32,7 +31,7 @@ class Solution:
                 south_row, south_col = row + 1, col
                 south = (south_row, south_col)
                 if south not in seen and grid2[south_row][south_col] == 1:
-                    queue.append(south)
+                    stack.append(south)
                     seen.add(south)
 
             # East
@@ -40,7 +39,7 @@ class Solution:
                 east_row, east_col = row, col + 1
                 east = (east_row, east_col)
                 if east not in seen and grid2[east_row][east_col] == 1:
-                    queue.append(east)
+                    stack.append(east)
                     seen.add(east)
 
             # West
@@ -48,7 +47,7 @@ class Solution:
                 west_row, west_col = row, col - 1
                 west = (west_row, west_col)
                 if west not in seen and grid2[west_row][west_col] == 1:
-                    queue.append(west)
+                    stack.append(west)
                     seen.add(west)
 
         return result
