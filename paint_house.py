@@ -6,7 +6,7 @@ class Solution:
         n = len(costs)
         dp = [[0, 0, 0] for _ in range(n)]
 
-        for i, cost in enumerate(reversed(costs)):
+        for i, cost in enumerate(costs):
             red, blue, green = cost
             if i == 0:
                 dp[i][0] = red
