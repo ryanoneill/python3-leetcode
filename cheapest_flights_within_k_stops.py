@@ -1,4 +1,4 @@
-from heapq import heappush, heappop
+from collections import deque
 from typing import Dict, List
 
 class Solution:
@@ -17,16 +17,16 @@ class Solution:
 
         cheapest = [-1 for _ in range(n)]
 
-        heap = []
+        queue = deque()
+        queue.append((0, 0, src))
 
-        heappush(heap, (0, 0, src))
-        while heap:
-            hop, price, city = heappop(heap)
+        while queue:
+            hop, price, city = queue.popleft()
             print(hop, price, city)
             if cheapest[city] == -1 or price < cheapest[city]:
                 cheapest[city] = price
                 if hop < legs and city in hops:
                     for hop_to, hop_price in hops[city].items():
-                        heappush(heap, (hop+1, price+hop_price, hop_to))
+                        queue.append((hop+1, price+hop_price, hop_to))
 
         return cheapest[dst]
