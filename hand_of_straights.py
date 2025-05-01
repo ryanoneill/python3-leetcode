@@ -21,7 +21,6 @@ class Solution:
                         if counts[num] == 0:
                             del counts[num]
                     else:
-                        print(counts, num)
                         result = False
                         break
                 if not result:
