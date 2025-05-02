@@ -1,41 +1,49 @@
 class Solution:
-    # TODO: Improve this solution - slow
+    # Performance:
+    # 1st iteration: Beats  5% (LOL)
+    # 2nd iteration: Beats  5% (LOL - But Faster)
+    # 3rd iteration: Beats 82% (Much Better and Unique)
     def pushDominoes(self, dominoes: str) -> str:
-        previous = dominoes
-        current = ""
+        n = len(dominoes)
+        results = ["."] * n
 
-        n = len(previous)
-        currents = [""] * n
-
-        while True:
-            left = "."
-            right = "."
-            for i, value in enumerate(previous):
-                if value == "L" or value == "R":
-                    currents[i] = value
+        stack = []
+        for i, domino in enumerate(dominoes):
+            results[i] = domino
+            if not stack:
+                stack.append(i)
+            elif domino == "R":
+                peek_index = stack[-1]
+                peek = dominoes[peek_index]
+                if peek == "R":
+                    for j in range(peek_index+1, i):
+                        results[j] = "R"
+                stack.pop()
+                stack.append(i)
+            elif domino == "L":
+                peek_index = stack[-1]
+                peek = dominoes[peek_index]
+                if peek == "L":
+                    for j in range(peek_index+1, i):
+                        results[j] = "L"
+                elif peek == ".":
+                    for j in range(peek_index, i):
+                        results[j] = "L"
                 else:
-                    if i-1 == -1:
-                        left = "."
-                    else:
-                        left = previous[i-1]
+                    left = peek_index + 1
+                    right = i - 1
+                    while left < right:
+                        results[left] = "R"
+                        results[right] = "L"
+                        left += 1
+                        right -= 1
+                stack.pop()
 
-                    if i+1 == n:
-                        right = "."
-                    else:
-                        right = previous[i+1]
+        if stack:
+            peek_index = stack[-1]
+            peek = dominoes[peek_index]
+            if peek == "R":
+                for j in range(peek_index, n):
+                    results[j] = "R"
 
-                    if left == "R" and right == "L":
-                        value = "."
-                    elif left == "R":
-                        value = "R"
-                    elif right == "L":
-                        value = "L"
-
-                    currents[i] = value
-            current = "".join(currents)
-            if current == previous:
-                break
-            else:
-                previous = current
-
-        return current
+        return "".join(results)
